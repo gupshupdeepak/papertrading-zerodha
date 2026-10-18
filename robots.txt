@@ -1,0 +1,33 @@
+# =============================================================
+#  Kite Paper Trading Timer — robots.txt
+#  Single-page site. All content is served from "/" because
+#  Home / Setup Guide / FAQ / Contact are client-side views
+#  on one page. The extension zip lives under /downloads/.
+# =============================================================
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /downloads/
+
+# Non-indexable paths / tracking parameters
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*?utm_
+Disallow: /*?sessionid=
+
+# Explicitly welcome the major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# --- Sitemap ---
+Sitemap: https://yourdomain.com/sitemap.xml
