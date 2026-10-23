@@ -8,15 +8,15 @@
 <meta name="keywords" content="Kite paper trading, Zerodha Kite extension, Firefox extension, paper trading timer, trade journal, options paper trade, CSV export" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <meta name="author" content="Kite Paper Trading Timer" />
-<link rel="canonical" href="https://yourdomain.com/" />
+<link rel="canonical" href="https://papertrading-zerodha.renovations.workers.dev/" />
 
 <!-- Open Graph / Social -->
 <meta property="og:site_name" content="Kite Paper Trading Timer" />
 <meta property="og:title" content="Kite Paper Trading Timer — Timer &amp; Journal for Zerodha Kite" />
 <meta property="og:description" content="Detects the instrument and price on your Kite chart, times your paper trade, auto-closes it at the end and journals the P&amp;L. Firefox. No real orders." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://yourdomain.com/" />
-<meta property="og:image" content="https://yourdomain.com/assets/og-cover.png" />
+<meta property="og:url" content="https://papertrading-zerodha.renovations.workers.dev/" />
+<meta property="og:image" content="https://papertrading-zerodha.renovations.workers.dev/assets/og-cover.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Kite Paper Trading Timer — Timer &amp; Journal for Zerodha Kite" />
 <meta name="twitter:description" content="Firefox extension: timed paper trades on Zerodha Kite with auto instrument/price detection and CSV journal." />
@@ -35,7 +35,10 @@
       "name": "Kite Paper Trading Timer",
       "operatingSystem": "Firefox",
       "applicationCategory": "FinanceApplication",
-      "softwareVersion": "1.4.0",
+      "softwareVersion": "1.4.1",
+      "downloadUrl": "https://addons.mozilla.org/en-US/firefox/addon/kite-paper-trading-timer/",
+      "installUrl": "https://addons.mozilla.org/en-US/firefox/addon/kite-paper-trading-timer/",
+      "license": "https://www.mozilla.org/MPL/2.0/",
       "description": "Firefox extension that adds a floating paper-trading timer and journal to Zerodha Kite, with automatic instrument and chart-price detection, auto-close at timer end and CSV export. No real orders are ever placed.",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
     },
@@ -45,6 +48,7 @@
         { "@type": "Question", "name": "Does it place real orders or connect to my broker?", "acceptedAnswer": { "@type": "Answer", "text": "No. It is a paper-trading journal only. It never connects to a broker, never asks for API keys or credentials, and has no code path that can place an order." } },
         { "@type": "Question", "name": "How does it detect the instrument and price?", "acceptedAnswer": { "@type": "Answer", "text": "The instrument is read from the Kite chart URL, the chart header, or the page title. The price is read from the chart's visible price label or OHLC legend, including inside the chart iframe. If nothing readable is found, you can click the price on the chart or type it." } },
         { "@type": "Question", "name": "What happens when the timer ends?", "acceptedAnswer": { "@type": "Answer", "text": "It beeps, reads the chart price and closes the trade automatically, logging P&L in points and percent. If the price cannot be read, the trade stays open and you enter the exit price yourself." } },
+        { "@type": "Question", "name": "How do I install it?", "acceptedAnswer": { "@type": "Answer", "text": "Install it from the Kite Paper Trading Timer page on Firefox Add-ons (addons.mozilla.org) with one click." } },
         { "@type": "Question", "name": "Where is my data stored?", "acceptedAnswer": { "@type": "Answer", "text": "Only in your own Firefox profile using local extension storage. Nothing is sent to any server." } }
       ]
     }
@@ -118,8 +122,8 @@
       <a href="#/contact" data-route="/contact" class="hover:text-white transition">Contact</a>
     </div>
     <div class="flex items-center gap-3">
-      <a href="downloads/Kite_Paper_Trading_Timer_Firefox.zip" download
-         class="rounded-lg bg-neon px-4 py-2 text-sm font-bold text-ink hover:brightness-110 transition">Download</a>
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/kite-paper-trading-timer/" target="_blank" rel="noopener"
+         class="rounded-lg bg-neon px-4 py-2 text-sm font-bold text-ink hover:brightness-110 transition">Add to Firefox</a>
       <button id="menuBtn" aria-label="Open menu" class="md:hidden text-2xl">☰</button>
     </div>
   </nav>
@@ -155,7 +159,7 @@
             A floating panel for Zerodha Kite that <strong class="text-white">detects the instrument and price</strong> from your open chart, runs a trade timer, and <strong class="text-white">auto-closes the trade at zero</strong> with the exit price — then journals the P&amp;L.
           </p>
           <div class="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href="downloads/Kite_Paper_Trading_Timer_Firefox.zip" download class="rounded-lg bg-neon px-6 py-3 font-bold text-ink hover:brightness-110 transition">Download for Firefox →</a>
+            <a href="https://addons.mozilla.org/en-US/firefox/addon/kite-paper-trading-timer/" target="_blank" rel="noopener" class="rounded-lg bg-neon px-6 py-3 font-bold text-ink hover:brightness-110 transition">Add to Firefox →</a>
             <a href="#/guide" data-route="/guide" class="rounded-lg border border-line px-6 py-3 font-semibold text-white hover:border-neon hover:text-neon transition">Setup guide</a>
           </div>
           <p class="mt-4 text-xs text-muted">No real orders. No broker login. Data stays in your browser.</p>
@@ -309,7 +313,7 @@
               How do I install it?
               <span class="text-neon group-open:rotate-45 transition-transform text-xl">+</span>
             </summary>
-            <p class="mt-3 text-sm text-muted">Download the zip, unzip it, and load it from Firefox’s <code class="text-neon">about:debugging</code> page. Steps are in the <a href="#/guide" data-route="/guide" class="text-neon underline">Setup Guide</a>.</p>
+            <p class="mt-3 text-sm text-muted">Install it from the <a href="https://addons.mozilla.org/en-US/firefox/addon/kite-paper-trading-timer/" target="_blank" rel="noopener" class="text-neon underline">Firefox Add-ons page</a> with one click. Steps are in the <a href="#/guide" data-route="/guide" class="text-neon underline">Setup Guide</a>.</p>
           </details>
         </div>
       </div>
@@ -319,8 +323,8 @@
     <section class="mx-auto max-w-6xl px-5 py-24">
       <div class="rounded-3xl border border-neon/40 bg-gradient-to-br from-panel to-ink p-10 sm:p-14 text-center shadow-neon">
         <h2 class="text-3xl sm:text-4xl font-black tracking-tight">Practise the timing. Risk nothing.</h2>
-        <p class="mt-4 text-muted max-w-xl mx-auto">Load the extension in Firefox, open a Kite chart, and run your first timed paper trade.</p>
-        <a href="downloads/Kite_Paper_Trading_Timer_Firefox.zip" download class="mt-8 inline-block rounded-lg bg-neon px-8 py-4 font-bold text-ink hover:brightness-110 transition">Download for Firefox</a>
+        <p class="mt-4 text-muted max-w-xl mx-auto">Install the extension from Firefox Add-ons, open a Kite chart, and run your first timed paper trade.</p>
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/kite-paper-trading-timer/" target="_blank" rel="noopener" class="mt-8 inline-block rounded-lg bg-neon px-8 py-4 font-bold text-ink hover:brightness-110 transition">Add to Firefox</a>
       </div>
     </section>
   </div>
@@ -331,7 +335,7 @@
   <div class="route" data-view="/guide">
     <section class="border-b border-line grid-bg">
       <div class="mx-auto max-w-3xl px-5 py-20 text-center">
-        <span class="inline-block rounded-full border border-neon/40 bg-neon/10 px-3 py-1 text-xs font-semibold text-neon mb-5">Setup · ~3 minutes</span>
+        <span class="inline-block rounded-full border border-neon/40 bg-neon/10 px-3 py-1 text-xs font-semibold text-neon mb-5">Setup · ~2 minutes</span>
         <h1 class="text-4xl sm:text-5xl font-black tracking-tight">Install &amp; run your first timed trade</h1>
         <p class="mt-5 text-muted">No config files. No API keys. No real orders.</p>
       </div>
@@ -339,41 +343,35 @@
 
     <div class="mx-auto max-w-3xl px-5 py-16 space-y-14">
       <section>
-        <h2 class="step text-xl sm:text-2xl font-bold flex items-center" data-step="1">Download and unzip</h2>
+        <h2 class="step text-xl sm:text-2xl font-bold flex items-center" data-step="1">Install from Firefox Add-ons</h2>
         <div class="mt-4 sm:pl-14 text-muted space-y-3">
-          <p><a class="text-neon underline" href="downloads/Kite_Paper_Trading_Timer_Firefox.zip" download>Download the extension zip</a> and unzip it. You’ll get a folder named <code class="text-neon">kite-paper-trading-timer</code> containing <code class="text-neon">manifest.json</code>.</p>
+          <p>Open the <a class="text-neon underline" href="https://addons.mozilla.org/en-US/firefox/addon/kite-paper-trading-timer/" target="_blank" rel="noopener">Kite Paper Trading Timer page on Firefox Add-ons</a> and click <strong class="text-white">Add to Firefox</strong>, then confirm the permission prompt.</p>
+          <p>The extension asks only for access to Zerodha sites (<code class="text-neon">zerodha.com</code> and <code class="text-neon">zerodha.net</code>) and declares that it collects no data. It stays active across Firefox restarts and updates automatically.</p>
         </div>
       </section>
       <section>
-        <h2 class="step text-xl sm:text-2xl font-bold flex items-center" data-step="2">Load it in Firefox</h2>
+        <h2 class="step text-xl sm:text-2xl font-bold flex items-center" data-step="2">Open a Kite chart</h2>
         <div class="mt-4 sm:pl-14 text-muted space-y-3">
-          <p>Type <code class="text-neon">about:debugging</code> in the address bar → <strong class="text-white">This Firefox</strong> → <strong class="text-white">Load Temporary Add-on…</strong> → select <code class="text-neon">manifest.json</code>.</p>
-          <p>Firefox removes temporary add-ons when it restarts, so repeat this step after a restart. The extension requests only <code class="text-neon">storage</code> and <code class="text-neon">activeTab</code>, plus access to Zerodha pages.</p>
-        </div>
-      </section>
-      <section>
-        <h2 class="step text-xl sm:text-2xl font-bold flex items-center" data-step="3">Open a Kite chart</h2>
-        <div class="mt-4 sm:pl-14 text-muted space-y-3">
-          <p>Open your chart on Kite and reload the tab. The floating <strong class="text-white">Kite Paper Trading Timer</strong> panel appears at the top-right. If it’s hidden, click the extension’s toolbar button and choose <strong class="text-white">Show / hide floating panel</strong>.</p>
+          <p>Open your chart on Kite (reload the tab if it was already open). The floating <strong class="text-white">Kite Paper Trading Timer</strong> panel appears at the top-right. If it’s hidden, click the extension’s toolbar button and choose <strong class="text-white">Show / hide floating panel</strong>.</p>
           <p>The instrument field fills itself from the chart a couple of seconds after load.</p>
         </div>
       </section>
       <section>
-        <h2 class="step text-xl sm:text-2xl font-bold flex items-center" data-step="4">Start a trade</h2>
+        <h2 class="step text-xl sm:text-2xl font-bold flex items-center" data-step="3">Start a trade</h2>
         <div class="mt-4 sm:pl-14 text-muted space-y-3">
           <p>Press <strong class="text-white">Detect chart price</strong> next to the entry price, pick <span class="text-neon font-semibold">BUY</span> or <span class="text-danger font-semibold">SELL</span>, choose a duration (5, 15, 25, 30, 45, 60 min or custom), and click <strong class="text-white">Start trade</strong>.</p>
           <div class="rounded-xl border border-line bg-panel p-4 text-sm"><strong class="text-white">Tip:</strong> verify the detected instrument and price match the chart before you start.</div>
         </div>
       </section>
       <section>
-        <h2 class="step text-xl sm:text-2xl font-bold flex items-center" data-step="5">Let it close, then reset</h2>
+        <h2 class="step text-xl sm:text-2xl font-bold flex items-center" data-step="4">Let it close, then reset</h2>
         <div class="mt-4 sm:pl-14 text-muted space-y-3">
           <p>When the clock hits zero the panel beeps, reads the chart price and closes the trade, showing P&amp;L in points and percent. Keep your mouse off the chart at that moment so the legend shows the latest candle.</p>
           <p>If the price can’t be read, type the exit price and click <strong class="text-white">Close trade</strong>. Press <strong class="text-white">Reset</strong> to clear the panel for the next trade.</p>
         </div>
       </section>
       <section>
-        <h2 class="step text-xl sm:text-2xl font-bold flex items-center" data-step="6">Review your journal</h2>
+        <h2 class="step text-xl sm:text-2xl font-bold flex items-center" data-step="5">Review your journal</h2>
         <div class="mt-4 sm:pl-14 text-muted space-y-3">
           <p><strong class="text-white">Recent trades</strong> lists every paper trade. <strong class="text-white">Export CSV</strong> saves them as <code class="text-neon">paper-trades.csv</code>. <strong class="text-white">Clear history</strong> wipes the saved list.</p>
         </div>
@@ -382,16 +380,15 @@
       <section class="rounded-2xl border border-line bg-panel p-6">
         <h2 class="text-xl font-bold">Troubleshooting</h2>
         <ul class="mt-4 space-y-3 text-sm text-muted">
-          <li><strong class="text-white">Panel doesn’t appear?</strong> Reload the Kite tab after loading the extension, or use the toolbar button to show it.</li>
+          <li><strong class="text-white">Panel doesn’t appear?</strong> Reload the Kite tab after installing, or use the toolbar button to show it.</li>
           <li><strong class="text-white">Instrument or price not detected?</strong> Click <strong class="text-white">Debug</strong> and note which frames responded and what candidates they found. Then type the value manually or send the output via the <a href="#/contact" data-route="/contact" class="text-neon underline">contact page</a>.</li>
           <li><strong class="text-white">Wrong exit price?</strong> The legend may have shown a hovered candle. Move the mouse off the chart and use Detect chart price again.</li>
           <li><strong class="text-white">Timer ended while the tab was closed?</strong> The trade stays open and asks for a manual exit price so the journal stays honest.</li>
-          <li><strong class="text-white">Extension gone after restarting Firefox?</strong> Temporary add-ons are removed on restart. Load it again from <code class="text-neon">about:debugging</code>.</li>
         </ul>
       </section>
 
       <div class="text-center pt-4">
-        <a href="downloads/Kite_Paper_Trading_Timer_Firefox.zip" download class="inline-block rounded-lg bg-neon px-8 py-4 font-bold text-ink hover:brightness-110 transition">Download the extension</a>
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/kite-paper-trading-timer/" target="_blank" rel="noopener" class="inline-block rounded-lg bg-neon px-8 py-4 font-bold text-ink hover:brightness-110 transition">Add to Firefox</a>
       </div>
     </div>
   </div>
@@ -451,7 +448,7 @@
         <div class="rounded-2xl border border-line bg-panel p-6">
           <h2 class="font-bold text-lg">Before you ask…</h2>
           <ul class="mt-3 space-y-2 text-sm text-muted list-disc list-inside">
-            <li>Did you reload the Kite tab after loading the extension?</li>
+            <li>Did you reload the Kite tab after installing the extension?</li>
             <li>Is the chart open (not only the watchlist)?</li>
             <li>Did you move the mouse off the chart before detecting?</li>
             <li>What does the Debug button show?</li>
@@ -478,7 +475,8 @@
       <a href="#/guide" data-route="/guide" class="hover:text-white">Setup</a>
       <a href="#faq" data-route="/#faq" class="hover:text-white">FAQ</a>
       <a href="#/contact" data-route="/contact" class="hover:text-white">Contact</a>
-      <a href="downloads/Kite_Paper_Trading_Timer_Firefox.zip" download class="hover:text-white">Download</a>
+      <a href="https://github.com/gupshupdeepak/papertrading-zerodha" target="_blank" rel="noopener" class="hover:text-white">Source</a>
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/kite-paper-trading-timer/" target="_blank" rel="noopener" class="hover:text-white">Add to Firefox</a>
     </div>
     <div class="text-xs">© <span id="year"></span> Kite Paper Trading Timer. Paper trading only — not financial advice. Not affiliated with Zerodha.</div>
   </div>
